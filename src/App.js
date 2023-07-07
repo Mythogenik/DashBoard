@@ -8,16 +8,13 @@ import letter from './images/letter.webp'
 import bell from './images/bell.jpg'
 import pic from './images/picture.jpg'
 import settings from './images/settings.jpg'
-import graph1 from './images/graph1.png'
-import graph2 from './images/graph2.jpg'
-import graph3 from './images/graph3.png'
-import graph4 from './images/graph4.png'
 import AccordionMenu from './accordion/AccordionMenu.jsx'
 import AccordionMenu2 from './accordion/AccordionMenu2.jsx'
 import AccordionMenu3 from './accordion/AccordionMenu3.jsx';
 import AccordionMenu4 from './accordion/AccordionMenu4.jsx';
 import AccordionMenu5 from './accordion/AccordionMenu5.jsx';
-
+import ChartComponent from './LineChart.js';
+import Chart from './Chart.js'
 
 
 function App() {
@@ -32,7 +29,7 @@ function App() {
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;MAIN</h6>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='' >Dashboard</a></h4>
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;COMPONENTS</h6>
-          <AccordionMenu />
+        <AccordionMenu />
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;ICONS</h6>
         <AccordionMenu2 />
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;MAP</h6>
@@ -100,52 +97,58 @@ function App() {
             <div className='total'>
               <div className='total-popup-1'>
                 <div className='l-side'>
-                  <p className='info'>&nbsp;Total Sales</p>
-                  <p className='info'>&nbsp;3,257</p>
-                  <p className='info'>&nbsp;76% Growth This  &nbsp; &nbsp;Month</p>
+                  <p className='info'>Total Sales</p>
+                  <p className='info'>3,257</p>
+                  <p className='info'>76% Growth This Month</p>
                 </div>
                 <div className='r-side'><center>
-                  <img src={graph1} alt='Graph' className='graph-1'></img>
+                <ChartComponent/>
                   </center>
                 </div>
               </div>
               <div className='total-popup-2'>
                 <div className='l-side'>
-                  <p className='info'>&nbsp;Total Stats</p>
-                  <p className='info'>&nbsp;1,678</p>
-                  <p className='info'>&nbsp;15% Loss This &nbsp; &nbsp; Month</p>
+                  <p className='info'>Total Stats</p>
+                  <p className='info'>1,678</p>
+                  <p className='info'>15% Loss This Month</p>
                 </div>
                 <div className='r-side'><center>
-                <img src={graph4} alt='Graph' className='graph-2'></img></center>
+                <ChartComponent/></center>
                 </div>
               </div>
               <div className='total-popup-3'>
                 <div className='l-side'>
-                  <p className='info'>&nbsp;Total Income</p>
-                  <p className='info'>&nbsp;$2,590</p>
-                  <p className='info'> &nbsp;62% From Last  &nbsp; &nbsp;Month</p>
+                  <p className='info'>Total Income</p>
+                  <p className='info'>$2,590</p>
+                  <p className='info'>62% From Last Month</p>
                 </div>
                 <div className='r-side'><center>
-                  <img src={graph3} alt='Graph' className='graph-3'></img></center>
+                <ChartComponent/></center>
                 </div>
                 </div>
                 <div className='total-popup-4'>
                 <div className='l-side'>
-                  <p className='info'>&nbsp;Total Tax</p>
-                  <p className='info'>&nbsp;$1,954</p>
-                  <p className='info'>&nbsp;53% From Last  &nbsp; &nbsp; &nbsp; &nbsp;Month</p>
+                  <p className='info'>Total Tax</p>
+                  <p className='info'>$1,954</p>
+                  <p className='info'>53% From Last Month</p>
                 </div>
                 <div className='r-side'><center>
-                  <img src={graph2} alt='Graph' className='graph-4'></img></center>
+                <ChartComponent/></center>
                 </div>
                 </div>
             </div>
             <div className='activity'>
-              <div>  
-
+              <div className='chart-side'>  
+                <Chart />
               </div>
-              <div>
+              <div className='activity-side'>
+                <div className='up'>
+                  <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recent Activity</h5>
+                  <button className='buttonAll'>View All</button>
+                </div>
+                <div className='down'>
 
+                </div>
               </div>
             </div>
             <div className='products'>
