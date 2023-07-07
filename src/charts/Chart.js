@@ -21,8 +21,8 @@ const ChartComponent = () => {
     const interval = setInterval(() => {
       setData(prevData => {
         const newData = prevData.map(item => {
-          const updatedNetProfit = item.NetProfit * (Math.random()*0.25 +0.91); 
-          const updatedSales = item.Sales * (Math.random()*0.25 +0.91);
+          const updatedNetProfit = item.NetProfit * (Math.random()*0.05 +0.97); 
+          const updatedSales = item.Sales * (Math.random()*0.05 +0.97);
           return { ...item, NetProfit: Math.round(updatedNetProfit), Sales: Math.round(updatedSales) };
         });
         return newData;
@@ -33,8 +33,8 @@ const ChartComponent = () => {
   }, []);
 
   return (
-    <div>
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SALES ACTIVITY</h5>
+    <div className='barChart'>
+      <h5 className='headerSales'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SALES ACTIVITY</h5>
       <BarChart width={1020} height={350} data={data}>
         <CartesianGrid stroke="#ccc" />
         <XAxis dataKey="month" axisLine={false} tickLine={false}/>

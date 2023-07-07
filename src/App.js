@@ -13,9 +13,8 @@ import AccordionMenu2 from './accordion/AccordionMenu2.jsx'
 import AccordionMenu3 from './accordion/AccordionMenu3.jsx';
 import AccordionMenu4 from './accordion/AccordionMenu4.jsx';
 import AccordionMenu5 from './accordion/AccordionMenu5.jsx';
-import ChartComponent from './LineChart.js';
-import Chart from './Chart.js'
-
+import ChartComponent from './charts/LineChart.js';
+import Chart from './charts/Chart.js'
 
 function App() {
   return (
@@ -26,10 +25,12 @@ function App() {
           <input type="image" id="myimage" alt='Logo' src={logo} className='logo-img'></input>
           </center>
         </div >
+        <div>
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;MAIN</h6>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='' >Dashboard</a></h4>
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;COMPONENTS</h6>
         <AccordionMenu />
+        </div>
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;ICONS</h6>
         <AccordionMenu2 />
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;MAP</h6>
@@ -38,7 +39,6 @@ function App() {
         <AccordionMenu4 />
         <h6>&nbsp;&nbsp;&nbsp;&nbsp;PAGES & ERROR PAGES</h6>
         <AccordionMenu5 />
-
       </div>
       <div className='right-panel'> 
         <div className='toolbar'>
@@ -139,15 +139,33 @@ function App() {
             </div>
             <div className='activity'>
               <div className='chart-side'>  
-                <Chart />
+                <Chart/>
               </div>
               <div className='activity-side'>
                 <div className='up'>
-                  <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recent Activity</h5>
+                  <h5 className='recentheader'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RECENT ACTIVITY</h5>
                   <button className='buttonAll'>View All</button>
                 </div>
                 <div className='down'>
+                  <div className='OnetoSix'>
+                  <div className='Circle1'>1</div>
+                  <div className='Circle2'>2</div>
+                  <div className='Circle3'>3</div>
+                  <div className='Circle4'>4</div>
+                  <div className='Circle5'>5</div>
+                  <div className='Circle6'>6</div>
+                  </div>
+                  <div className='Activity6'>
+                    <p><h5>New Products,<span className='span1'>52% New products.</span><br/> More than 200 new products are added</h5></p>
+                    <p><h5>New Sale,<span className='span2'>76% Profit earned.</span> <br/> $2,546 income earned in today sale</h5></p>
+                    <p><h5>New Customers,<span className='span3'>24% New customers</span> <br/>1.3k new customers reached us this year</h5></p>
+                    <p><h5>New Reviews,<span className='span4'>96% Positive reviews.</span> <br/>There are 500 plus new reviews</h5></p>
+                    <p><h5>New Visits; today, <span className='span5'>33% target achieved.</span> <br/>daily 20 plus new customers visits us</h5></p>
+                    <p><h5>New Consistency,<span className='span6'>90% growth.</span> <br/>More than 5 Sales happening every week</h5></p>
+                  </div>
+                  <div className='time'>
 
+                  </div>
                 </div>
               </div>
             </div>

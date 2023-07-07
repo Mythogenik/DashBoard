@@ -1,6 +1,22 @@
 .accordion-header {
   margin: auto;
 }
-.accordion-content {
-
+.hover:hover, .text-button:hover {
+  box-shadow: 0 0 10px 5px rgba(189, 189, 209, 0.5);
+  padding: 7px;
+  background-color: rgba(164, 164, 173, 0.288);
+  color: rgb(99, 64, 133);
+}
+.text-button {
+  background: none;
+  border: none;
+  color: rgb(68, 67, 67);
+  background-color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease-in-out;
+  box-sizing: border-box;
 }

@@ -302,6 +302,7 @@ h6 {
 .activity {
   display: flex;
   flex-direction: row;
+  height: 465px;
 }
 .chart-side {
   background-color: white;
@@ -312,8 +313,8 @@ h6 {
 }
 .activity-side {
   background-color: white;
-  border-radius: 2%;
-  height: 432px;
+  border-radius: 1%;
+  height: 465px;
   width: 30.2%;
   margin-left: 1.5% ;
 }
@@ -321,14 +322,85 @@ h6 {
   display: flex;
   flex-direction: row; 
   border-bottom: 2px solid rgba(189, 189, 209, 0.2);
+  margin-top: 2%;
+  height: 10%;
 }
 .buttonAll {
-  margin-left: 60%;
+  margin-left: 58%;
   border-color: rgba(189, 189, 209, 0.2);
   color: white;
   background-color: #664dc9;
   width:12.7%;
-  height: 25px;
+  height: 26px;
   border-radius: 10%;
-  margin-top: 3%;
+}
+.OnetoSix {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400px;
+  width: 16%;
+}
+.Circle1, .Circle2, .Circle3, .Circle4, .Circle5, .Circle6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #0d6efd;
+  width: 48%;
+  height: 9%;
+  margin-left: 20%;
+  color: white;
+  font-size: 14px;
+}
+.Circle1 {
+  background-color: #5856d6;
+}
+.Circle2 {
+  background-color: #4cd964;
+}
+.Circle3 {
+  background-color: #f1c40f;
+}
+.Circle4 {
+  background-color: #34aadc;
+}
+.Circle5 {
+  background-color: #ff2d55;
+}
+.Circle6 {
+  background-color: #34aadc;
+}
+.Activity6 {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.down {
+  display: flex;
+  flex-direction: row;
+}
+h5 {
+  margin: 0;
+}
+.span1 {
+  color: gray;
+}
+.span2 {
+  color: tomato;
+}
+.span3 {
+  color: greenyellow;
+}
+.span4 {
+  color: orange;
+}
+.span5 {
+  color: #664dc9;
+}
+.span6 {
+  color: aqua;
+}
+.recentheader {
+  margin-top: 1.7%;
 }

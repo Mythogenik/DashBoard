@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-<link rel="stylesheet" href="/Accordion.css" />
+import './Accordion.css'
 
 const AccordionMenu = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -9,23 +9,25 @@ const AccordionMenu = () => {
   };
   const menuItems = [
     {
-      title: 'Elements ',
+      title: 'Elements >',
       contents: ['> Accordion', '> Alerts', '> Avatar','> Badges', '> BreadCrumb', '> Buttons'],
     },
     {
-      title: 'Apps',
+      title: 'Apps >',
       contents: ['> Chats', '> Contacts','> Calendar', '> Cookies','> Counters', '> filemanager'],
     },
     {
-      title: 'AdvancedUI',
+      title: 'AdvancedUI >',
       contents: ['> Utilities', '> Widgets', '> Charts', '> Tables'],
     },
     {
-      title: 'Landing Page',
+      title: 'Landing Page >',
       contents: [],
     },
   ];
 
+
+  
   return (
     <div>
       {menuItems.map((item, index) => (
@@ -33,13 +35,19 @@ const AccordionMenu = () => {
           <div
             className="accordion-header"
             onClick={() => handleItemClick(index)}
-          >
-            &nbsp;&nbsp;&nbsp;{item.title}&nbsp;
+          > <br/>&nbsp;
+           
+            &nbsp;&nbsp;&nbsp; <button class="text-button" >{item.title}</button>&nbsp;
           </div>
           {expandedItem === index && (
             <div className="accordion-content">
               {item.contents.map((content, contentIndex) => (
-                <div key={contentIndex}>{content}</div>
+
+                <div id='myText' className='hover' key={contentIndex}>
+                   <br/>&nbsp;
+                  {content}
+              
+                  </div>
               ))}
             </div>
           )}

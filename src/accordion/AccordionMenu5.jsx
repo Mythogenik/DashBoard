@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-<link rel="stylesheet" href="/Accordion.css" />
+import './Accordion.css'
 
 const AccordionMenu = () => {
   const [expandedItem, setExpandedItem] = useState(null);
@@ -9,11 +9,11 @@ const AccordionMenu = () => {
   };
   const menuItems = [
     {
-      title: 'Pages ',
+      title: 'Pages >',
       contents: ['> Profile', '> Edit Profile', '> Notification List','> Email', '> Pricing', '> Invoice'],
     },
     {
-      title: 'ErrorPages ',
+      title: 'ErrorPages >',
       contents: ['> 400', '> 401', '> 403','> 404', '> 500', '> 503'],
     },
   ];
@@ -23,15 +23,17 @@ const AccordionMenu = () => {
       {menuItems.map((item, index) => (
         <div key={index}>
           <div
+
             className="accordion-header"
             onClick={() => handleItemClick(index)}
           >
-            &nbsp;&nbsp;&nbsp;{item.title}&nbsp;
+             <br/>&nbsp;
+             &nbsp;&nbsp;&nbsp; <button class="text-button">{item.title}</button>&nbsp;
           </div>
           {expandedItem === index && (
             <div className="accordion-content">
               {item.contents.map((content, contentIndex) => (
-                <div key={contentIndex}>{content}</div>
+                <div key={contentIndex}> <br/>&nbsp;{content}</div>
               ))}
             </div>
           )}
